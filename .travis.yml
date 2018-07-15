@@ -1,0 +1,38 @@
+git:
+  submodules: false # the submodules are just for demo and are loaded via url
+
+
+language: node_js
+
+node_js:
+  - stable
+
+install:
+  - npm install
+  - npm install -g pulp
+  - curl -sOL https://github.com/purescript/purescript/releases/download/v0.12.0/linux64.tar.gz
+  - tar -zxvf ./linux64.tar.gz
+  - mv ./purescript ./tmp
+  - mv ./tmp/purs ./
+  - rm -rf ./linux64*
+  - rm -rf ./tmp
+  - curl -sOL https://github.com/purescript/psc-package/releases/download/v0.4.0/linux64.tar.gz
+  - tar -zxvf ./linux64.tar.gz
+  - mv ./psc-package ./tmp
+  - mv ./tmp/psc-package ./
+  - rm -rf ./linux64*
+  - rm -rf ./tmp
+
+script:
+  - npm run test
+
+after_success:
+  - npm run build
+
+deploy:
+  local_dir: dist
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
