@@ -21,6 +21,7 @@ install:
   - mv ./tmp/psc-package ./
   - rm -rf ./linux64*
   - rm -rf ./tmp
+  - export PATH=$(pwd):$PATH
 
 script:
   - npm run test
