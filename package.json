@@ -6,9 +6,8 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "test": "jest",
-    "build": "npm run webpack:build && cp -R ./src/webpage/static ./dist/ && cp ./src/webpage/_redirects ./dist/",
     "dev": "npm-run-all -p _devserver",
-    "webpack:build": "cross-env NODE_ENV=production webpack --progress --config webpack.prod.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --config webpack.prod.js",
     "dev:auto-reload": "npm-run-all -p _devserver:auto-reload",
     "dev:public:auto-reload": "npm-run-all -p _devserver:auto-reload:public",
     "_devserver": "cross-env NODE_ENV=dev webpack-dev-server --progress --open --config webpack.dev.js",
