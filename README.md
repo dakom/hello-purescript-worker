@@ -18,7 +18,8 @@ Boilerplate for using Purescript within a web-worker project, i.e. something tha
 * `pscid`
 * `npm run dev:auto-reload`
 
-Note: `pscid` or some way to start purs-ide must be running.. at the moment the webpack plugin doesn't hook into it properly otherwise
+At the moment it seems the webpack plugin doesn't hook into the psc-ide properly
+One way to work around this is to run `pscid`
 
 ## Build
 * `npm run build`

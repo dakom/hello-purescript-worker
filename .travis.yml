@@ -8,7 +8,8 @@ node_js:
 
 install:
   - npm install
-  - npm install -g pulp purescript psc-package
+  - npm install pulp purescript psc-package
+  - psc-package install
 
 script:
   - npm run test
