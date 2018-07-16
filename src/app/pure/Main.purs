@@ -1,8 +1,9 @@
 module Main where
 
 import Prelude
+
+import Data.Maybe (Maybe(..), maybe)
 import Data.Number.Format (toString)
-import Data.Maybe (Maybe (..), maybe)
 import Math (floor)
 
 type State =
@@ -25,11 +26,13 @@ getInitialState now =
         tick: Nothing
     } 
 
+
 updateState :: Number -> State -> State
 updateState now state = state
     {
         tick = Just $ updateTick state.startTime now state.tick
     }
+
 
 updateTick :: Number -> Number -> Maybe Tick -> Tick
 updateTick startTime now mTick =
@@ -43,8 +46,7 @@ updateTick startTime now mTick =
         (\tick -> {
             lastTime: now,
             deltaTime: now - tick.lastTime,
-            --elapsedTime: toString $ floor ((now - startTime) / 1000.0) <> "yay"
-            elapsedTime: "test 5"
+            elapsedTime: toString $ floor ((now - startTime) / 1000.0)
         })
         
         mTick

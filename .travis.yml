@@ -8,20 +8,7 @@ node_js:
 
 install:
   - npm install
-  - npm install -g pulp
-  - curl -sOL https://github.com/purescript/purescript/releases/download/v0.12.0/linux64.tar.gz
-  - tar -zxvf ./linux64.tar.gz
-  - mv ./purescript ./tmp
-  - mv ./tmp/purs ./
-  - rm -rf ./linux64*
-  - rm -rf ./tmp
-  - curl -sOL https://github.com/purescript/psc-package/releases/download/v0.4.0/linux64.tar.gz
-  - tar -zxvf ./linux64.tar.gz
-  - mv ./psc-package ./tmp
-  - mv ./tmp/psc-package ./
-  - rm -rf ./linux64*
-  - rm -rf ./tmp
-  - export PATH=$(pwd):$PATH
+  - npm install -g pulp purescript psc-package
 
 script:
   - npm run test
