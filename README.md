@@ -11,7 +11,8 @@ Boilerplate for using Purescript within a web-worker project, i.e. something tha
 * The core logic is in Purescript
 
 ## Development tips
-
+* `npm install`
+* `psc-package install`
 * Local Dev Server: `npm run dev:auto-reload`
 * Production Build: `npm run build`
 

@@ -44,7 +44,7 @@ updateTick startTime now mTick =
             lastTime: now,
             deltaTime: now - tick.lastTime,
             --elapsedTime: toString $ floor ((now - startTime) / 1000.0) <> "yay"
-            elapsedTime: "test 4"
+            elapsedTime: "test 5"
         })
         
         mTick
