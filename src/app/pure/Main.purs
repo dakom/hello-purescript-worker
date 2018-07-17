@@ -33,7 +33,6 @@ updateState now state = state
         tick = Just $ updateTick state.startTime now state.tick
     }
 
-
 updateTick :: Number -> Number -> Maybe Tick -> Tick
 updateTick startTime now mTick =
     maybe 
