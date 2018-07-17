@@ -6,6 +6,7 @@ output/
 .psci_modules/
 .pulp-cache/
 .psc-package/
+.psc-ide-port
 
 # node
 npm-debug.log
