@@ -6,6 +6,7 @@ import Data.Maybe (Maybe(..), maybe)
 import Data.Number.Format (toString)
 import Math (floor)
 
+
 type State =
     {
         startTime :: Number,
@@ -18,6 +19,7 @@ type Tick =
         deltaTime :: Number,
         elapsedTime :: String
     }
+
 
 getInitialState :: Number -> State
 getInitialState now = 
@@ -45,7 +47,8 @@ updateTick startTime now mTick =
         (\tick -> {
             lastTime: now,
             deltaTime: now - tick.lastTime,
-            elapsedTime: toString $ floor ((now - startTime) / 1000.0)
+            --elapsedTime: toString $ floor ((now - startTime) / 1000.0)
+            elapsedTime: "6"
         })
         
         mTick

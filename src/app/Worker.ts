@@ -1,7 +1,6 @@
 import {initWorker} from "utils/Utils";
 import {WorkerCommand, MESSAGE} from "types/Worker-Types";
-import {updateState, getInitialState} from "./pure/Main.purs";
-
+import {updateState, getInitialState} from "purescript/Main/index";
 
 initWorker().fork(
     console.error,

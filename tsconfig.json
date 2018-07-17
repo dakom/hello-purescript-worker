@@ -9,6 +9,7 @@
                 "*"
               ],
             
+            "purescript/*": ["output/*"],
             "renderer/*": ["src/app/io/renderer/*"],
             "types/*": ["src/app/io/types/*"],
             "utils/*": ["src/app/io/utils/*"]

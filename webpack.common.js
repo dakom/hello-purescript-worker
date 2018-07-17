@@ -31,30 +31,15 @@ module.exports = {
                     "source-map-loader"
                 ]
             },
-            {
-                test: /\.purs$/,
-                use: [
-                    {
-                        loader: 'purs-loader',
-                        options: {
-                            src: [
-                                'src/**/*.purs'
-                            ],
-                            pscPackage: true,
-                            pscIde: true,
-                            watch: !isProduction 
-                        }
-                    }
-                ]
-            },
             { test: /\.html$/, loader: "html-loader" },
             { test: /\.scss$/,loaders: ["style-loader", "css-loader","fast-sass-loader"] },
             { test: /\.(glsl|vs|fs)$/, loader: 'ts-shader-loader'},
         ]
     },
     resolve: {
-        extensions: [".tsx", ".ts", ".js", ".purs"],
+        extensions: [".tsx", ".ts", ".js"],
         alias: {
+            "purescript": path.resolve(__dirname, "output/"), 
             "renderer": path.resolve(__dirname, "src/app/io/renderer/"), 
             "types": path.resolve(__dirname, "src/app/io/types/"), 
             "utils": path.resolve(__dirname, "src/app/io/utils/"), 

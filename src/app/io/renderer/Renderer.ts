@@ -10,7 +10,7 @@ export const render = (state:State) =>
             (tick => 
                 `<div>
                     <div>${tick.elapsedTime} seconds passed</div>
-                    <div>Delta Time (ms): ${tick.deltaTime}</div>
+                    <div>abcdefg ${tick.deltaTime}</div>
                 </div>`)
             (state.tick);
 
