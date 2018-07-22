@@ -47,8 +47,7 @@ updateTick startTime now mTick =
         (\tick -> {
             lastTime: now,
             deltaTime: now - tick.lastTime,
-            --elapsedTime: toString $ floor ((now - startTime) / 1000.0)
-            elapsedTime: "6"
+            elapsedTime: toString $ floor ((now - startTime) / 1000.0)
         })
         
         mTick

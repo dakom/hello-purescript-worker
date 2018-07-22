@@ -3,6 +3,7 @@ import {maybe} from "utils/Utils";
 
 const div = document.getElementById("app");
 
+
 export const render = (state:State) => 
     div.innerHTML = 
         maybe<Tick>
@@ -10,7 +11,7 @@ export const render = (state:State) =>
             (tick => 
                 `<div>
                     <div>${tick.elapsedTime} seconds passed</div>
-                    <div>abcdefg ${tick.deltaTime}</div>
+                    <div>Delta Time (ms): ${tick.deltaTime}</div>
                 </div>`)
             (state.tick);
 
